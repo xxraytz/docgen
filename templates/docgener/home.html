@@ -1,2 +1,143 @@
-<!-- templates/home.html -->
-<h1>Hello, world!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MyProject</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script type="text/javascript" href="js/main.js"></script>
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowscroll('#dimatop')">
+      <span>Project</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Возможности" onclick="slowscroll('#main')">Возможности</a>
+      <a href="#" title="Преимущества" onclick="slowscroll('#overview')">Преимущества</a>
+      <a href="#" title="Контакты" onclick="slowscroll('#contacts')">Контакты</a>
+      <a href="#" title="Ответы на вопросы" onclick="slowscroll('#faq')">FAQ</a>
+    </div>
+  </header>
+
+<div id="dimatop">
+  <h1>Заполняем</h1>
+  <h3>формы для заполнения</h3>
+</div>
+
+<div id="main">
+
+  <div class="intro">
+    <h2>Наши услуги помогут вам</h2>
+    <span>Большой выбор всего, что может вам пригодиться</span>
+  </div>
+
+  <div class="text">
+    <span>Иди своей дорогой S.T.A.L.K.E.R.</span>
+  </div>
+
+</div>
+
+<div id="overview">
+  <h2>Преимущества</h2>
+  <h4>С нами всё проще</h4>
+
+ <div class="img">
+   <img src="image/hahahablyat.jpg" alt="">
+   <span>Дружный коллектив</span>
+ </div>
+
+ <div class="img">
+   <img src="image/funny_time.jpg" alt="">
+   <span>Постоянные ивенты для работников</span>
+ </div>
+
+ <div class="img">
+   <img src="image/disapointment.jpg" alt="">
+   <span>Высокая заработная плата</span>
+ </div>
+
+ <div class="img">
+   <img src="image/monday.jpg" alt="">
+   <span>Ходить на работу с радостью</span>
+ </div>
+
+</div>
+
+<div id="contacts">
+  <center><h5>Обратная связь</h5></center>
+  <form id="form_input">
+    <label for="name">Имя <span>*</span> </label><br>
+    <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+    <label for="email">Ваша почта<span>*</span></label><br>
+    <input type="email" placeholder="Введите email" name="email" id="email"><br>
+    <label for="message">Сообщение <span>*</span> </label><br>
+    <textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+    <div id="mess_send" class="btn">Отправить</div>
+  </form>
+</div>
+
+<div id="faq">
+<div>
+  <span class="title">Напалм</span><br>
+  <span class="heading">Чувствуешь запах?</span>
+  <p>Это напалм, сынок. Больше ничто в мире не пахнет так.
+    Я люблю запах напалма поутру. Однажды мы бомбили одну высоту, двенадцать часов подряд.
+    И когда всё закончилось, я поднялся на неё. Там уже никого не было, даже ни одного вонючего трупа.
+    Но запах! Весь холм был им пропитан. Это был запах… победы!
+    Когда-нибудь эта война закончится.</p>
+</div>
+
+<div>
+  <span class="title">Стрелок</span><br>
+  <span class="heading">Может быть он погиб?</span>
+  <p>Давно я Стрелка не видел. Может быть он погиб? Нет, этого не может быть. Он из любой передряги выберется.
+   С ним всё в порядке... Ну что, пойдём? Пойдём, пора обедать. Я знаю, это для тебя важнее, чем судьба
+   старого друга...</p>
+ </div>
+
+<div>
+  <span class="title">Долбоёб</span><br>
+  <span class="heading">Долбоёб?</span>
+  <p>Я целюсь во врага, но не рукой. Ибо тот, кто целится рукой, забыл лицо своего отца. Я же целюсь глазом.
+  Я стреляю, но не рукой, ибо тот, кто стреляет рукой, забыл лицо своего отца. Я стреляю разумом.
+  Я убиваю, но не оружием, ибо тот, кто убивает оружием, забыл лицо своего отца. Пока стоит эта башня,
+  пока мы сражаемся, я убиваю сердцем.</p>
+</div>
+
+<div>
+  <span class="title">Кодекс</span><br>
+  <span class="heading">Какой кодекс?</span>
+  <p>Когда остальные слепо следуют за истиной, помни — ничто не истина, когда остальные ограничены моралью
+  или законом помни — все дозволено. Мир — это иллюзия, и можно покориться ей, что большинство людей
+  и делают, или бороться. Законы исходят от здравого мышления, а не от Бога, а потому ничто не истина
+  и всё дозволено.</p>
+</div>
+
+<div>
+  <span class="title">RDR 2</span><br>
+  <span class="heading">Каков план?</span>
+  <p>Если мы вынуждены сражаться — мы сражаемся. Если мы вынуждены убегать — мы убежим.
+  Если мы должны умереть — мы умрем, но... у нас останется свобода.</p>
+</div>
+</div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>/*при прокрутка шапка едет с нами*/
+    function slowscroll(id){
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+    $(document).on("scroll", function(){
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else {
+        $("header").attr("class", "fixed");
+      }
+    });
+  </script>
+</body>
+</html>
