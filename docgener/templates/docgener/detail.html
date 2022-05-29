@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <script src="{% static 'docgener/js/script.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'docgener/css/style.css' %}">
+</head>
+<body>
+
+<form action="{% url 'docgener:vote' client.id %}" method="post">
+{% csrf_token %}
+<fieldset>
+    <legend><h1>{{ client.name }}</h1></legend>
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+    {% for document in client.document_set.all %}
+        <input type="radio" name="document" id="document{{ forloop.counter }}" value="{{ document.id }}">
+        <label for="document{{ forloop.counter }}">{{ document.text }}</label><br>
+    {% endfor %}
+</fieldset>
+<input type="submit" value="Vote">
+</form>
+
+</body>
+</html>

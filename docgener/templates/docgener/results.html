@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'docgener/css/style.css' %}"></head>
+<body>
+<h1> {{ client.name }} </h1>
+<ul>
+    {% for document in client.document_set.all %}
+    <li>
+    {{ document.text }} -- {{ document.cost }} vote {{ document.cost|pluralize }}
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url "docgener:detail" client.id %}">Vote again?</a>
+</body>
+</html>
