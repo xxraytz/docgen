@@ -7,3 +7,28 @@ body {
     background: white url("../images/background.jpeg") fixed center center no-repeat ;
     background-size: cover;
 }
+
+.list {
+    list-style-type: none;
+}
+
+.list-item-contacts li textarea {
+    resize: none;
+}
+
+.list-item-contacts li input {
+    height: 20px;
+    width: 200px;
+    font-size: 15px;
+    font-family: "Times New Roman";
+    color: black;
+}
+
+.list-item-contacts li span {
+    font-weight: 400;
+    display: inline-block;
+    float: left;
+    width: 170px;
+    color: gray;
+
+}

@@ -10,12 +10,32 @@
 <body>
 {% if latest_client_list %}
     <ul>
-    {% for client in latest_client_list %}
-        <li><a href={% url "docgener:detail" client.id %}>{{ client.name }}</a></li>
-    {% endfor %}
+        {% for client in latest_client_list %}
+            <li><a href={% url "docgener:detail" client.id %}>{{ client.name }}</a></li>
+        {% endfor %}
     </ul>
 {% else %}
     <p>No polls are available.</p>
 {% endif %}
+
+<ul class="list-item-contacts | list">
+    <li>
+        <span>Имя:</span> <input class="input" type="text" id="name">
+    </li>
+    <li>
+        <span>Почта:</span> <input class="input" type="email" id="email">
+    </li>
+    <li>
+        <span>Телефон:</span> <input type="tel" id="phone">
+    </li>
+    <li>
+        <span>Тема:</span> <input type="text" id="topic">
+    </li>
+    <li>
+        <span>Сообщение:</span> <textarea name="message" cols="40" rows="7" id="message"
+                                          style="resize: none"></textarea>
+    </li>
+</ul>
+<button onclick="Send()" style="margin-left: 210px; width: 310px; font-size: 20px">Отправить</button>
 </body>
 </html>
